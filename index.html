@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Partner Organizations Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Custom CSS for the filter panel -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- This div is where the map will be rendered -->
+    <div id="map"></div>
+
+    <!-- This is the filter panel -->
+    <div class="filter-panel">
+        <h3>Filter by Type:</h3>
+        <div id="type-filter">
+            <!-- Checkboxes will be dynamically inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Leaflet JavaScript library -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Your custom map logic -->
+    <script src="map.js"></script>
+
+</body>
+</html>
