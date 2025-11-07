@@ -81,12 +81,14 @@ function drawMarkers(data) {
         L.circleMarker([item.latitude, item.longitude], {
             radius: 5,
             color: getColor(item.type),
-            stroke: false,
+            weight: 1,
+            stroke: true,
             fillOpacity: 1
         })
         .bindPopup(popupContent)
         .addTo(markerGroup);
     });
 }
+
 
 
