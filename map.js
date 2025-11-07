@@ -26,7 +26,7 @@ function getColor(type) {
 }
 
 // --- 3. FETCH AND PROCESS DATA ---
-fetch('partner_orgs_test.json')
+fetch('partner_orgs.json')
     .then(response => response.json())
     .then(data => {
         allData = data; // Store the data globally
@@ -88,3 +88,4 @@ function drawMarkers(data) {
         .addTo(markerGroup);
     });
 }
+
