@@ -79,7 +79,7 @@ function drawMarkers(data) {
 
         // Create the circle marker
         L.circleMarker([item.latitude, item.longitude], {
-            radius: 3,
+            radius: 5,
             color: getColor(item.type),
             stroke: false,
             fillOpacity: 1
@@ -88,4 +88,5 @@ function drawMarkers(data) {
         .addTo(markerGroup);
     });
 }
+
 
