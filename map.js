@@ -15,9 +15,12 @@ let allData = []; // Variable to store the fetched data
 // This is the JavaScript equivalent of your colorFactor() function
 function getColor(type) {
     switch (type) {
-        case 'Hockey': return 'seagreen'; // Replace with your actual types and desired colors
-        case 'Animals': return 'tomato';
-        //case 'Type C': return 'plum4';
+        case 'Academic': return '#8DD3C7'; // Replace with your actual types and desired colors
+        case 'Health System': return '#FFFFB3';
+        case 'Government': return '#BEBADA';
+        case 'Industry': return '#FB8072';
+        case 'GPO': return '#80B1D3';
+        case 'Citizens': return '#FDB462';
         default: return 'grey';
     }
 }
@@ -42,9 +45,16 @@ function populateFilters(data) {
     types.forEach(type => {
         const option = document.createElement('div');
         option.classList.add('filter-option');
+
+        // Get the color for the current type
+        const color = getColor(type);
+
         option.innerHTML = `
             <input type="checkbox" id="${type}" name="type" value="${type}" checked>
-            <label for="${type}">${type}</label>
+            <label for="${type}">
+                <span class="color-box" style="background-color: ${color};"></span>
+                ${type}
+            </label>
         `;
         filterContainer.appendChild(option);
     });
@@ -69,13 +79,12 @@ function drawMarkers(data) {
 
         // Create the circle marker
         L.circleMarker([item.latitude, item.longitude], {
-            radius: 8,
+            radius: 3,
             color: getColor(item.type),
             stroke: false,
-            fillOpacity: 0.8
+            fillOpacity: 1
         })
         .bindPopup(popupContent)
         .addTo(markerGroup);
     });
 }
-
