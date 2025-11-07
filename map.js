@@ -15,9 +15,9 @@ let allData = []; // Variable to store the fetched data
 // This is the JavaScript equivalent of your colorFactor() function
 function getColor(type) {
     switch (type) {
-        case 'Hockey': return 'skyblue'; // Replace with your actual types and desired colors
+        case 'Hockey': return 'seagreen'; // Replace with your actual types and desired colors
         case 'Animals': return 'tomato';
-        //case 'Type C': return 'seagreen';
+        //case 'Type C': return 'plum4';
         default: return 'grey';
     }
 }
@@ -78,3 +78,4 @@ function drawMarkers(data) {
         .addTo(markerGroup);
     });
 }
+
